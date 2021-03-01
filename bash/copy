@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+exec > /dev/tty
+printf '\033]52;%s;' "${1:-c}"
+base64 -w0
+printf '\a'
