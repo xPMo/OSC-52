@@ -1,5 +1,5 @@
 #!/usr/bin/env zsh
 exec 3<> ${TTY:-/dev/tty}
-printf '\e]52;%s;?\a' ${1:-c} >&3
+printf '\e]52;%c;?\a' ${1:-c} >&3
 read -s -r -d $'\a' <&3
 base64 -d <<< ${REPLY:7}

@@ -1,5 +1,5 @@
 #!/usr/bin/env zsh
 exec > ${TTY:-/dev/tty}
-printf '\033]52;%s;' ${1:-c} >&3
+printf '\033]52;%c;' ${1:-c} >&3
 base64 -w0
 printf '\a' >&3
